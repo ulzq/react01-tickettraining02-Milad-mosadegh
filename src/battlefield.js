@@ -52,6 +52,7 @@ class Battlefield extends React.Component {
     c.closePath();
     c.fill();
     c.fillStyle = '#f00';
+    c.strokeStyle = "white";
     this.props.controller.state.player.forEach((player) => {
       c.beginPath();
       c.arc(player.x, height - player.y, 10, 0, 2 * Math.PI);
@@ -64,6 +65,7 @@ class Battlefield extends React.Component {
       c.lineTo(player.x + linex, height - player.y + liney);
       c.stroke();
     });
+
     if (cannonball) {
       c.fillStyle = 'white';
       c.beginPath();
